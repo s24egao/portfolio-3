@@ -9,13 +9,12 @@
 
     onMounted(() => {
 		const r = new rive.Rive({
-			src: './s24egao.riv',
+			src: '/s24egao.riv',
 			canvas: document.getElementById('character'),
 			autoplay: true,
 			stateMachines: 'State Machine 1',
 			onLoad: () => {
 				r.resizeDrawingSurfaceToCanvas()
-				console.log(r.contents)
 			}
 		})
     })
@@ -35,6 +34,10 @@
 </template>
 
 <style>
+    #menu {
+        min-height: 800px;
+    }
+
     nav {
         display: flex;
         flex-direction: column;

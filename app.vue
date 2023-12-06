@@ -29,6 +29,7 @@
         <Bottom></Bottom>
         <SideLines></SideLines>
         <ScrollTransition></ScrollTransition>
+        <MouseEffect hover-target="a, a *"></MouseEffect>
     </div>
 </template>
 
@@ -43,8 +44,6 @@
     }
 
     .page-enter-from, .page-leave-to {
-        position: absolute;
-        width: 100%;
         opacity: 0;
         transform: translateY(60px);
     }
@@ -75,7 +74,7 @@
 
     body::before {
         content: '';
-        background-image: url(bg.png);
+        background-image: url(/bg.png);
         background-size: cover;
         background-position: 50% 25%;
         position: fixed;

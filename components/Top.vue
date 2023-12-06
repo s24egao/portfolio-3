@@ -1,9 +1,11 @@
 <template>
     <header>
-        <div>
-            <h1>木白 SHOW</h1>
-            <h2>Illustrator • Developer</h2>
-        </div>
+        <NuxtLink to="/">
+            <div>
+                <h1>木白 SHOW</h1>
+                <h2>Illustrator • Developer</h2>
+            </div>
+        </NuxtLink>
         <NuxtLink to="/">
             <div id="menu-button">
                 <div style="width: 30px; height: 2px; background: var(--main-color); margin-top: 10px;"></div>
@@ -23,6 +25,8 @@
         justify-content: space-between;
         position: sticky;
         top: 0px;
+        margin-bottom: 60px;
+        z-index: 1;
     }
 
     header h1 {
@@ -47,6 +51,7 @@
     header a {
         color: var(--main-color);
         text-decoration: none;
+        transition: 0.3s;
     }
 
     #menu-button div {

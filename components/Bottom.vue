@@ -11,6 +11,7 @@
         bottom: 0px;
         color: var(--light-color);
         padding: 30px 90px;
+        pointer-events: none;
     }
 
     @media (max-width: 800px) {
