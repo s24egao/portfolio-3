@@ -10,17 +10,6 @@
 
     function findScrollPosAll(elements) {
         for(let e of elements) e.dataset.scrollPos = findScrollPos(e)
-        if(finished) nextTransition(elements)
-    }
-
-    function nextTransition(elements) {
-        finished = false
-        for(let e of elements) if(e.dataset.scrollPos < scrollY + innerHeight - 100 && e.dataset.hide == 'true') {
-            e.dataset.hide = 'false'
-            setTimeout(() => { nextTransition(elements) }, props.delay || 100)
-            return
-        }
-        finished = true
     }
 
     onMounted(() => {
@@ -33,7 +22,13 @@
         }).observe(document.body, { childList: true, subtree: true })
 
         addEventListener('resize', () => findScrollPosAll(transitionElements))
-        addEventListener('scroll', () => { if(finished) nextTransition(transitionElements) })
+
+        setInterval(() => {
+            for(let e of transitionElements) if(e.dataset.scrollPos < scrollY + innerHeight - 100 && e.dataset.hide == 'true') {
+                e.dataset.hide = 'false'
+                break
+            }
+        }, props.delay || 100)
     })
 </script>
 

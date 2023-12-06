@@ -25,7 +25,7 @@
         justify-content: space-between;
         position: sticky;
         top: 0px;
-        margin-bottom: 60px;
+        margin-bottom: 30px;
         z-index: 1;
     }
 

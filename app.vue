@@ -29,7 +29,6 @@
         <Bottom></Bottom>
         <SideLines></SideLines>
         <ScrollTransition></ScrollTransition>
-        <MouseEffect hover-target="a, a *"></MouseEffect>
     </div>
 </template>
 
@@ -40,12 +39,11 @@
     }
 
     .page-enter-active, .page-leave-active {
-        transition: opacity 0.5s, transform 0.5s;
+        transition: opacity 0.5s;
     }
 
     .page-enter-from, .page-leave-to {
         opacity: 0;
-        transform: translateY(60px);
     }
 
     :root {
@@ -80,12 +78,15 @@
         position: fixed;
         width: 100%;
         height: 100%;
-        opacity: 0.1;
     }
 
     section {
         padding: 30px 90px;
         position: relative;
+    }
+
+    h1, h2, h3, h4 {
+        font-weight: 100;
     }
 
     @media (max-width: 800px) {

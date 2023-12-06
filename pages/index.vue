@@ -8,7 +8,7 @@
     let r
 
     onMounted(() => {
-		const r = new rive.Rive({
+		r = new rive.Rive({
 			src: '/s24egao.riv',
 			canvas: document.getElementById('character'),
 			autoplay: true,
@@ -36,6 +36,18 @@
 <style>
     #menu {
         min-height: 800px;
+    }
+
+    #menu::before {
+        content: '';
+        background-image: url(/bg.png);
+        background-size: cover;
+        background-position: 50% 25%;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0px;
+        left: 0px;
     }
 
     nav {
