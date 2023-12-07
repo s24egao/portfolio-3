@@ -7,16 +7,16 @@
 
 <template>
     <section id="works">
-        <h1>WORKS／作品</h1>
+        <h1 data-hide="true">WORKS／作品</h1>
         <HorizontalScroll>
             <div id="project-list">
                 <ContentList path="/works" :query="{ sort: [{ date: -1 }] }" v-slot="{ list }">
-                    <div data-hide="true" v-for="item in list" class="item">
+                    <div v-for="item in list" class="item">
                         <NuxtLink :to="item.page" draggable="false">
-                            <img :src="item.image" alt="" draggable="false">
+                            <img data-hide="true" :src="item.image" alt="" draggable="false">
                             <div>
-                                <h3>{{ item.name }}</h3>
-                                <h4>{{ item.date }}</h4>
+                                <h3 data-hide="true">{{ item.name }}</h3>
+                                <h4 data-hide="true">{{ item.date }}</h4>
                             </div>
                         </NuxtLink>
                     </div>
@@ -32,7 +32,7 @@
     }
 
     #project-list {
-        height: 70vh;
+        height: 75vh;
         display: flex;
         align-items: center;
         gap: 20px;
@@ -42,7 +42,7 @@
         position: relative;
         flex-shrink: 0;
         width: 700px;
-        max-width: 100%;
+        max-width: calc(100% - 6px);
     }
     
     .item a {
@@ -54,6 +54,7 @@
         width: 100%;
         height: 400px;
         object-fit: cover;
+        border: solid 3px var(--light-color);
     }
 
     @media (max-width: 800px) {

@@ -13,7 +13,7 @@
 <template>
     <section id="work-info">
         <NuxtLink data-hide="true" to='/works' class="back-button">&lt BACK</NuxtLink>
-        <img data-hide="true" :src="work.image" alt="" style="width: 100%; height: 400px; object-fit: cover;">
+        <img data-hide="true" :src="work.image" alt="">
         <h1 data-hide="true">{{ work.name }}</h1>
         <h3 data-hide="true">{{ work.date }}</h3>
         <p data-hide="true">{{ work.description }}</p>
@@ -24,6 +24,17 @@
 </template>
 
 <style>
+    #work-info {
+        margin-bottom: 120px;
+    }
+
+    #work-info img {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+        border: solid 3px var(--light-color);
+    }
+
     #work-info .back-button {
         display: block;
         margin-bottom: 20px;

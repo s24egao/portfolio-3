@@ -22,7 +22,11 @@
     }
 
     function handleTouchMove(e) {
-        velocity.value += (touchX - e.touches[0].clientX) * 0.2
+        let movementX = touchX - e.touches[0].clientX
+        if(Math.abs(movementX) > 10) {
+            e.preventDefault()
+            velocity.value += movementX * 0.2
+        }
         touchX = e.touches[0].clientX
     }
 
@@ -37,14 +41,14 @@
     }
 
     onMounted(() => {
-        addEventListener('wheel', handleScroll, { passive: false })
+        container.value.addEventListener('wheel', handleScroll, { passive: false })
         container.value.addEventListener('touchstart', handleTouchStart, { passive: false })
         addEventListener('touchmove', handleTouchMove, { passive: false })
         requestAnimationFrame(updateScroll)
     })
 
     onBeforeUnmount(() => {
-        removeEventListener('wheel', handleScroll, { passive: false })
+        container.value.removeEventListener('wheel', handleScroll, { passive: false })
         container.value.removeEventListener('touchstart', handleTouchStart, { passive: false })
         removeEventListener('touchmove', handleTouchMove, { passive: false })
     })

@@ -1,8 +1,6 @@
 <script setup>
     const props = defineProps(['delay'])
 
-    let finished = true
-
     function findScrollPos(e) {
         if(e && e.offsetParent != document.body) return e.offsetTop + findScrollPos(e.offsetParent)
         else return e.offsetTop
@@ -43,6 +41,6 @@
 
     *[data-hide='true'] {
         opacity: 0;
-        transform: translateY(30px);
+        transform: translateX(30px);
     }
 </style>
