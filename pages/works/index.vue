@@ -27,12 +27,16 @@
 </template>
 
 <style>
+    #works {
+        margin-bottom: 60px;
+    }
+
     #works h1 {
         margin: 10px 0px;
     }
 
     #project-list {
-        height: 75vh;
+        height: 70vh;
         display: flex;
         align-items: center;
         gap: 20px;
@@ -59,7 +63,7 @@
 
     @media (max-width: 800px) {
         .item img {
-            height: 35vh;
+            height: 50vh;
         }
     }
 </style>

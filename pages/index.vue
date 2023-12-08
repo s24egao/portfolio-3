@@ -72,7 +72,7 @@
     }
 
     #character {
-        width: calc(360px + 5vw);
+        width: 500px;
         aspect-ratio: 0.5;
         max-width: 100%;
         position: absolute;

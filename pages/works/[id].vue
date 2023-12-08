@@ -37,7 +37,7 @@
 
     #work-info .back-button {
         display: block;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
     }
 
     #work-info a {

@@ -25,7 +25,7 @@
         let movementX = touchX - e.touches[0].clientX
         if(Math.abs(movementX) > 10) {
             e.preventDefault()
-            velocity.value += movementX * 0.2
+            velocity.value += movementX * 0.25
         }
         touchX = e.touches[0].clientX
     }

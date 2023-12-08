@@ -29,6 +29,7 @@
         <Bottom></Bottom>
         <SideLines></SideLines>
         <ScrollTransition></ScrollTransition>
+        <MouseEffect target="a, a *"></MouseEffect>
     </div>
 </template>
 
