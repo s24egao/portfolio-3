@@ -67,4 +67,8 @@
     #note-content {
         line-height: 2;
     }
+
+    #note-content p {
+        margin: 30px 0px;
+    }
 </style>

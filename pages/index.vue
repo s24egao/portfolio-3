@@ -26,7 +26,7 @@
 </script>
 
 <template>
-    <section id="menu">
+    <section id="home">
         <nav>
             <div v-for="page in pages" data-hide="true"><NuxtLink :to="page.path">{{ page.display }}</NuxtLink></div>
         </nav>
@@ -35,11 +35,11 @@
 </template>
 
 <style>
-    #menu {
+    #home {
         min-height: 800px;
     }
 
-    #menu::before {
+    #home::before {
         content: '';
         background-image: url(/bg.png);
         background-size: cover;

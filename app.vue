@@ -71,16 +71,6 @@
         margin: 0px;
     }
 
-    body::before {
-        content: '';
-        background-image: url(/bg.png);
-        background-size: cover;
-        background-position: 50% 25%;
-        position: fixed;
-        width: 100%;
-        height: 100%;
-    }
-
     section {
         padding: 30px 90px;
         position: relative;

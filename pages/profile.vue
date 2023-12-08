@@ -38,10 +38,10 @@
                 透過 Coding 打造出好看又好玩的內容<br>
                 因而踏上了學習開發網站的道路<br>
             </p>
-            <a data-hide="true" class="link" href="https://www.instagram.com/s24egao/" target="_blank">Instagram</a>
-            <a data-hide="true" class="link" href="https://twitter.com/s24egao" target="_blank">Twitter</a>
-            <a data-hide="true" class="link" href="https://www.pixiv.net/users/80929565" target="_blank">Pixiv</a>
-            <a data-hide="true" class="link" href="https://github.com/s24egao" target="_blank">GitHub</a>
+            <NuxtLink data-hide="true" class="link" to="https://www.instagram.com/s24egao/" target="_blank">Instagram</NuxtLink>
+            <NuxtLink data-hide="true" class="link" to="https://twitter.com/s24egao" target="_blank">Twitter</NuxtLink>
+            <NuxtLink data-hide="true" class="link" to="https://www.pixiv.net/users/80929565" target="_blank">Pixiv</NuxtLink>
+            <NuxtLink data-hide="true" class="link" to="https://github.com/s24egao" target="_blank">GitHub</NuxtLink>
         </div>
         <TimeLine title="時間軸" :contents="timeline"></TimeLine>
         <div></div>
