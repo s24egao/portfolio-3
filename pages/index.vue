@@ -2,7 +2,8 @@
     const pages = [
         { display: 'PROFILE', path: '/profile' },
         { display: 'WORKS', path: '/works' },
-        { display: 'GALLERY', path: '/gallery' }
+        { display: 'GALLERY', path: '/gallery' },
+        { display: 'NOTES', path: '/notes' }
     ]
 
     let r
@@ -66,7 +67,7 @@
 
     nav div {
         display: inline-block;
-        width: 300px;
+        width: 320px;
         z-index: 1;
         mix-blend-mode: difference;
     }

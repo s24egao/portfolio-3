@@ -19,7 +19,7 @@
 
 <template>
     <div class="gallery" ref="gallery" :style="{ '--scale': scale || 1 }">
-        <img data-hide="true" v-for="image in images" :src="image">
+        <img data-hide="true" v-for="image in images" :src="image" draggable="false">
         <video autoplay loop muted playsinline disablepictureinpicture data-hide="true" v-for="video in videos" :src="video"></video>
     </div>
 </template>

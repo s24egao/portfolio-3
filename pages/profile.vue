@@ -1,7 +1,7 @@
 <script setup>
     useSeoMeta({
-        title: 'PROFILE - 木白 SHOW',
-        ogTitle: 'PROFILE - 木白 SHOW'
+        title: 'Profile - 木白 SHOW',
+        ogTitle: 'Profile - 木白 SHOW'
     })
 
     let timeline = ref([
@@ -29,7 +29,7 @@
         <div>
             <img data-hide="true" src="/profile.png" alt="" width="200" style="image-rendering: pixelated;" draggable="false">
             <h1 data-hide="true">木白 SHOW</h1>
-            <h3 data-hide="true">Illustrator • Developer</h3>
+            <div data-hide="true">Illustrator • Developer</div>
             <p data-hide="true" :key="'profile'">
                 2003 年出生<br>
                 對於繪畫、遊戲創作領域很有興趣<br>

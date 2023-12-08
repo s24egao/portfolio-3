@@ -1,5 +1,5 @@
 <template>
-    <footer>
+    <footer class="light">
         <div>©2023</div>
         <div>This website is made by 木白</div>
     </footer>
@@ -9,7 +9,6 @@
     footer {
         position: fixed;
         bottom: 0px;
-        color: var(--light-color);
         padding: 30px 90px;
         pointer-events: none;
     }

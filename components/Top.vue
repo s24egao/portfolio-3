@@ -38,7 +38,8 @@
     header h2 {
         font-size: 15px;
         font-weight: 100;
-        margin: 6px;
+        margin: 2px;
+        color: var(--light-color)
     }
 
     #menu-button {

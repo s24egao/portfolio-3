@@ -90,6 +90,10 @@
         font-weight: 100;
     }
 
+    .light {
+        color: var(--light-color);
+    }
+
     @media (max-width: 800px) {
         section {
             padding: 30px 16px;

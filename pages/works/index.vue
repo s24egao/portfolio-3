@@ -1,7 +1,7 @@
 <script setup>
     useSeoMeta({
-        title: 'WORKS - 木白 SHOW',
-        ogTitle: 'WORKS - 木白 SHOW'
+        title: 'Works - 木白 SHOW',
+        ogTitle: 'Works - 木白 SHOW'
     })
 </script>
 

@@ -1,7 +1,7 @@
 <script setup>
     useSeoMeta({
-        title: 'GALLERY - 木白 SHOW',
-        ogTitle: 'GALLERY - 木白 SHOW'
+        title: 'Gallery - 木白 SHOW',
+        ogTitle: 'Gallery - 木白 SHOW'
     })
 
     const gallery = [
