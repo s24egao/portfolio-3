@@ -35,11 +35,6 @@
         border: solid 3px var(--light-color);
     }
 
-    #work-info .back-button {
-        display: block;
-        margin-bottom: 10px;
-    }
-
     #work-info a {
         color: var(--main-color);
         font-size: 21px;

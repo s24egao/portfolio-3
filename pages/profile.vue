@@ -3,25 +3,6 @@
         title: 'Profile - 木白 SHOW',
         ogTitle: 'Profile - 木白 SHOW'
     })
-
-    let timeline = ref([
-        {
-            year: 2024,
-            events: ['還沒到']
-        },
-        {
-            year: 2023,
-            events: ['做了現在這個網站', '開始學 vue 和 nuxt', '過生日']
-        },
-        {
-            year: 2022,
-            events: ['過生日', '運用過去所學的 HTML 製作了自己的個人頁面，並開始對 web 開發產生興趣']
-        },
-        {
-            year: 2021,
-            events: ['過生日', '學習 Blender', '開始以木白的名義活動']
-        }
-    ])
 </script>
 
 <template>
@@ -43,7 +24,13 @@
             <NuxtLink data-hide="true" class="link" to="https://www.pixiv.net/users/80929565" target="_blank">Pixiv</NuxtLink>
             <NuxtLink data-hide="true" class="link" to="https://github.com/s24egao" target="_blank">GitHub</NuxtLink>
         </div>
-        <TimeLine title="時間軸" :contents="timeline"></TimeLine>
+        <div>
+            <h2 data-hide="true">時間軸</h2>
+            <TimeLine title="2024" contents="還沒到"></TimeLine>
+            <TimeLine title="2023" contents="做了現在這個網站/開始學 vue 和 nuxt/過生日"></TimeLine>
+            <TimeLine title="2022" contents="好像其實也沒有幹嘛/過生日/運用過去所學的 HTML 製作了自己的個人頁面，並開始對 web 開發產生興趣"></TimeLine>
+            <TimeLine title="2021" contents="過生日/學習 Blender/開始以木白的名義活動"></TimeLine>
+        </div>
         <div></div>
     </section>
 </template>

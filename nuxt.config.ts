@@ -11,5 +11,11 @@ export default defineNuxtConfig({
                 { name: 'theme-color', content: 'black' }
             ]
         }
+    },
+    content: {
+        contentHead: false,
+        markdown: {
+            anchorLinks: false
+        }
     }
 })

@@ -3,44 +3,45 @@
 </script>
 
 <template>
-    <div>
-        <h2 data-hide="true">{{ title }}</h2>
-        <div data-hide="true" class="timeline" v-for="year in contents">
-            <div data-hide="true" class="year">{{ year.year }}</div>
-            <div data-hide="true" class="event" v-for="event in year.events">
-                <div class="event-line"></div>
-                <div class="event-text">{{ event }}</div>
-            </div>
+    <div class="timeline">
+        <div data-hide="true" class="year">{{ title }}</div>
+        <div>
+            <div data-hide="true" class="event" v-for="event in contents.split('/')">{{ event }}</div>
         </div>
     </div>
 </template>
 
 <style>
     .timeline {
-        margin-bottom: 60px;
-        max-width: 300px;
-    }
-
-    .timeline > .event > .event-line {
-        width: 2px;
-        height: 20px;
-        background: var(--light-color);
-        margin: 6px;
+        margin: 30px 0px;
+        max-width: 320px;
+        display: flex;
+        column-gap: 20px;
     }
     
-    .timeline > .event > .event-text {
-        display: flex;
-        align-items: center;
+    .event {
+        position: relative;
         color: var(--main-color);
+        padding-left: 16px;
+        margin-bottom: 19px;
     }
 
-    .timeline > .event > .event-text::before {
+    .event::before {
         content: '';
+        position: absolute;
+        height: 100%;
+        border-left: solid 3px var(--main-color);
+        left: 0px;
+    }
+
+    .event + .event::after {
+        content: '';
+        position: absolute;
+        display: block;
         flex-shrink: 0;
-        display: inline-block;
-        width: 4px;
-        height: 4px;
-        background: var(--main-color);
-        margin: 5px;
+        height: 3px;
+        border-left: solid 3px var(--light-color);
+        left: 0px;
+        bottom: calc(100% + 8px);
     }
 </style>

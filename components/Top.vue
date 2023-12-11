@@ -8,7 +8,7 @@
 </script>
 
 <template>
-    <div>
+    <div style="position: sticky; top: 0px; z-index: 2;">
         <header>
             <NuxtLink to="/">
                 <div>
@@ -25,7 +25,7 @@
         <div id="menu" :data-toggled="menuToggled">
             <h1>WEBSITE</h1>
             <div @click="menuToggled = 'false'">
-                <MenuLink subtitle="首頁" link="/">MENU</MenuLink>
+                <MenuLink subtitle="首頁" link="/">HOME</MenuLink>
                 <MenuLink subtitle="個人檔案" link="/profile">PROFILE</MenuLink>
                 <MenuLink subtitle="作品" link="/works">WORKS</MenuLink>
                 <MenuLink subtitle="畫廊" link="/gallery">GALLERY</MenuLink>
@@ -41,7 +41,7 @@
             <h1>ABOUT THIS SITE</h1>
             <div>This is 木白's portfolio website made by himself.</div>
             <br>
-            <div class="light">LAST UPDATE: 2023 / 12 / 09</div>
+            <div class="light">LAST UPDATE: 2023 / 12 / 12</div>
             <div id="menu-close-button" @click="menuToggled = 'false'">X</div>
         </div>
     </div>
@@ -54,10 +54,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        position: sticky;
-        top: 0px;
         margin-bottom: 30px;
-        z-index: 2;
     }
 
     header h1 {
@@ -70,7 +67,7 @@
         font-size: 15px;
         font-weight: 100;
         margin: 2px;
-        color: var(--light-color)
+        color: var(--light-color);
     }
 
     #menu-button {
@@ -91,7 +88,7 @@
     }
 
     #menu {
-        background: #000000ff;
+        background: var(--main-color);
         color: white;
         position: fixed;
         width: 100%;
@@ -101,12 +98,22 @@
         transition: 0.3s;
         box-sizing: border-box;
         padding: 30px 90px;
-        z-index: 3;
+        z-index: 2;
         overflow: scroll;
+    }
+
+    #menu *::selection {
+        background: white;
+        color: var(--main-color);
     }
 
     #menu h1 {
         margin: 50px 0px;
+        color: var(--light-color);
+    }
+
+    #menu h1::before {
+        content: '> ';
     }
 
     #menu a {
@@ -114,7 +121,7 @@
         margin-right: 100px;
         margin-bottom: 20px;
         color: white;
-        transition: 0.3s;
+        transition: 0.5s;
     }
 
     #menu-close-button {
@@ -132,6 +139,7 @@
     }
 
     #menu[data-toggled='false'] a {
+        transition: none;
         opacity: 0;
         transform: translateX(30px);
     }

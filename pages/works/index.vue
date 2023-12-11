@@ -39,7 +39,7 @@
         height: 70vh;
         display: flex;
         align-items: center;
-        gap: 20px;
+        gap: 60px;
     }
 
     .item {

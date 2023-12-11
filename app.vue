@@ -27,9 +27,8 @@
         <Top></Top>
         <NuxtPage></NuxtPage>
         <Bottom></Bottom>
-        <SideLines></SideLines>
         <ScrollTransition></ScrollTransition>
-        <MouseEffect target="a, a *"></MouseEffect>
+        <MouseEffect target="a, a *, #menu-button, #menu-close-button"></MouseEffect>
     </div>
 </template>
 
@@ -82,6 +81,13 @@
 
     .light {
         color: var(--light-color);
+    }
+    
+    .back-button {
+        display: block;
+        margin-bottom: 20px;
+        color: var(--main-color);
+        font-size: 21px;
     }
 
     @media (max-width: 800px) {

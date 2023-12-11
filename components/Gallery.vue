@@ -36,7 +36,7 @@
     .gallery img, .gallery video {
         flex-grow: var(--aspect);
         width: calc(100px * var(--aspect) * var(--scale));
-        max-width: calc(100px * var(--aspect) * var(--scale) * 3);
+        max-width: calc(100px * var(--aspect) * var(--scale) * 2);
     }
 
     .gallery img {

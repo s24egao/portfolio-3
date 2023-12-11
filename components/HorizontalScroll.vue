@@ -5,6 +5,7 @@
     let scrollValue = 0
     let touchX = 0
     let velocity = ref(0)
+    let mouseDown = false
 
     function scrollHorizontal(x) {
         let max = -contents.value.scrollWidth + container.value.clientWidth
@@ -23,11 +24,30 @@
 
     function handleTouchMove(e) {
         let movementX = touchX - e.touches[0].clientX
-        if(Math.abs(movementX) > 10) {
-            e.preventDefault()
-            velocity.value += movementX * 0.25
-        }
+        velocity.value += movementX * 0.2
+        if(Math.abs(velocity.value) > 5) e.preventDefault()
         touchX = e.touches[0].clientX
+    }
+
+    function handleMouseDown(e) {
+        touchX = e.clientX
+        mouseDown = true
+    }
+
+    function handleMouseMove(e) {
+        if(!mouseDown) return
+        let movementX = touchX - e.clientX
+        velocity.value += movementX * 0.2
+        if(Math.abs(velocity.value) > 5) {
+            container.value.style.pointerEvents = 'none'
+            e.preventDefault()
+        }
+        touchX = e.clientX
+    }
+
+    function handleMouseUp() {
+        mouseDown = false
+        container.value.style.pointerEvents = 'all'
     }
 
     let lastTime = 0
@@ -42,15 +62,26 @@
 
     onMounted(() => {
         container.value.addEventListener('wheel', handleScroll, { passive: false })
+
         container.value.addEventListener('touchstart', handleTouchStart, { passive: false })
         addEventListener('touchmove', handleTouchMove, { passive: false })
+
+        container.value.addEventListener('mousedown', handleMouseDown, { passive: false })
+        addEventListener('mousemove', handleMouseMove, { passive: false })
+        addEventListener('mouseup', handleMouseUp, { passive: false })
+
         requestAnimationFrame(updateScroll)
     })
 
     onBeforeUnmount(() => {
         container.value.removeEventListener('wheel', handleScroll, { passive: false })
+
         container.value.removeEventListener('touchstart', handleTouchStart, { passive: false })
         removeEventListener('touchmove', handleTouchMove, { passive: false })
+
+        container.value.removeEventListener('mousedown', handleMouseDown, { passive: false })
+        removeEventListener('mousemove', handleMouseMove, { passive: false })
+        removeEventListener('mouseup', handleMouseUp, { passive: false })
     })
 </script>
 

@@ -8,7 +8,7 @@
         <div>
             <h2>{{ title }}</h2>
             <div class="light">{{ date }}</div>
-            <div>{{ description }}</div>
+            <div class="note-description">{{ description }}</div>
         </div>
     </article>
 </template>
@@ -37,6 +37,11 @@
         text-decoration: underline;
         right: 30px;
         bottom: 30px;
+    }
+
+    .note-description {
+        height: 36px;
+        overflow: hidden;
     }
 
     @media (max-width: 800px) {

@@ -58,6 +58,7 @@
     #note-content img {
         width: 600px;
         max-width: 100%;
+        pointer-events: none;
     }
 
     #note a {

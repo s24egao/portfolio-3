@@ -6,6 +6,11 @@
         { display: 'NOTES', path: '/notes' }
     ]
 
+    useSeoMeta({
+        title: '木白 SHOW',
+        ogTitle: '木白 SHOW'
+    })
+
     let r
 
     onMounted(() => {
