@@ -1,8 +1,5 @@
 <template>
-    <footer class="light">
-        <div>©2023</div>
-        <div>This website is made by 木白</div>
-    </footer>
+    <footer class="light">©2023 木白 SHOW</footer>
 </template>
 
 <style>

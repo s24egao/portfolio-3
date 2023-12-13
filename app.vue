@@ -4,8 +4,9 @@
         ogTitle: '木白 SHOW',
         description: 'Illustrator • Developer',
         ogDescription: 'Illustrator • Developer',
-        ogImage: '',
-        twitterCard: 'summary'
+        ogImage: 'https://s24egao.github.io/profile_resize.png',
+        twitterCard: 'summary',
+        twitterImage: 'https://s24egao.github.io/profile_resize.png'
     })
 
     useHead({
@@ -73,10 +74,17 @@
     section {
         padding: 30px 90px;
         position: relative;
+        width: 100%;
+        box-sizing: border-box;
+        overflow-x: clip;
     }
 
     h1, h2, h3, h4 {
         font-weight: 100;
+    }
+
+    p {
+        letter-spacing: 2px;
     }
 
     .light {

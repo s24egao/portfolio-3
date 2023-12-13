@@ -37,8 +37,8 @@
     function handleMouseMove(e) {
         if(!mouseDown) return
         let movementX = touchX - e.clientX
-        velocity.value += movementX * 0.2
-        if(Math.abs(velocity.value) > 5) {
+        velocity.value += movementX * 0.1
+        if(Math.abs(velocity.value) > 2.5) {
             container.value.style.pointerEvents = 'none'
             e.preventDefault()
         }

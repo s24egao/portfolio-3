@@ -82,7 +82,7 @@
         aspect-ratio: 0.5;
         max-width: 100%;
         position: absolute;
-        top: -20px;
+        top: -60px;
         right: 200px;
     }
 

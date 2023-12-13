@@ -38,7 +38,7 @@
 <style>
     #profile {
         padding: 0px 180px;
-        margin: 120px 0px;
+        margin: 60px 0px 180px 0px;
         color: var(--main-color);
         display: flex;
         justify-content: space-between;
